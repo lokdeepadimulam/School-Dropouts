@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Number of Entries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1> The JPS School Student Dropout Details </h1>
+    <div id="blur">
+        <div class="hyper">
+            <a href="#" onclick="toggleBlur()">
+                Input</a>
+        </div>
+        <div id="popup">
+            <div class="data-entry">
+                <label for="email">Name:</label>
+                <input type="name" id="email" placeholder="Enter name">
+                <label for="caste">Caste:</label>
+                <input type="caste" id="caste" placeholder="Enter caste">
+                <label for="male">Gender:</label>
+                <input type="male" id="male" placeholder="Enter gender">
+                <label for="female">Age:</label>
+                <input type="female" id="female" placeholder="Enter age">
+                <label for="grade">Grade:</label>
+                <input type="grade" id="grade" placeholder="Enter grade">
+                <button id="add-data">Add Data</button>
+            </div>
+          <a onclick="toggleBlur()">Close</a>
+        </div>
+      </div>
+
+    <div class="controlcontain">
+        <div class="table-controls">
+            <label for="entries">Show entries:</label>
+            <select id="entries">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <table id="data-table">
+            <!-- Your table rows and headers go here -->
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>Caste</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const toggleBlur = () => {
+    const blurEl = document.getElementById("blur");
+    blurEl.classList.toggle("active");
+    
+    const popupEl = document.getElementById("popup");
+    popupEl.classList.toggle("active");
+    };
+    
+      </script>
+
+    <script src="jpsscript.js"></script>
+</body>
+</html>

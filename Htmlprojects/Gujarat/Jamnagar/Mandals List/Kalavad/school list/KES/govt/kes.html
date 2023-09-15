@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Table with Number of Entries</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+    <h1> Kalawad English Medium School Student Dropout Details </h1>
+
+    <div class="controlcontain">
+        <div class="table-controls">
+            <label for="entries">Show entries:</label>
+            <select id="entries">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+    </div>
+    <div class="container">
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search">
+        </div>
+        <table id="data-table">
+            <!-- Your table rows and headers go here -->
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>Caste</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const toggleBlur = () => {
+    const blurEl = document.getElementById("blur");
+    blurEl.classList.toggle("active");
+    
+    const popupEl = document.getElementById("popup");
+    popupEl.classList.toggle("active");
+    };
+    
+      </script>
+
+    <script src="kesscript.js"></script>
+</body>
+</html>

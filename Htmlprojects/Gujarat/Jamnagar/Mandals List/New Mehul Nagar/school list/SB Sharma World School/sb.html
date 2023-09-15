@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry and Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> SB Sharma World School Student Dropout Details </h1>
+    <div id="blur">
+        <div class="hyper">
+            <a href="#" onclick="toggleBlur()">
+                Input</a>
+        </div>
+        <div id="popup">
+            <div class="data-entry">
+                <label for="email">Name:</label>
+                <input type="name" id="email" placeholder="Enter name">
+                <label for="caste">Caste:</label>
+                <input type="caste" id="caste" placeholder="Enter caste">
+                <label for="male">Gender:</label>
+                <input type="male" id="male" placeholder="Enter gender">
+                <label for="female">Age:</label>
+                <input type="female" id="female" placeholder="Enter age">
+                <label for="grade">Grade:</label>
+                <input type="grade" id="grade" placeholder="Enter grade">
+                <button id="add-data">Add Data</button>
+            </div>
+          <a onclick="toggleBlur()">Close</a>
+        </div>
+      </div>
+    
+    <div class="data-table">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>S.no.</th>
+                    <th>Name</th>
+                    <th>Caste</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Data will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const toggleBlur = () => {
+    const blurEl = document.getElementById("blur");
+    blurEl.classList.toggle("active");
+    
+    const popupEl = document.getElementById("popup");
+    popupEl.classList.toggle("active");
+    };
+    
+      </script>
+
+    <script src="sbscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .heading{
+            background-color: #3b3939;
+            height: 100px;
+        }
+        .emblem{
+            float: left;
+            display: block;
+            max-height: 100px;
+            max-width: 100px;
+        }
+        h1 {
+            color: #fff;
+            float: left;
+        }
+        h2 {
+            text-align: center;
+        }
+        .containcontainer {
+            align-items: center;
+            justify-content: center;
+            margin: 10%;
+            width: auto;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+        }
+        input[type="text"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 5px 5px 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            margin-top: 7px;
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heading">
+        <img class="emblem" src="./emblem.png" alt="">
+        <h1>Government of Gujarat</h1>
+    </div>
+    <div class="containcontainer">
+        <div class="container">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input class="username" type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input class="pswd" type="password" id="password" name="password" required>
+    
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('login-form');
+
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            const users = [
+                { username: 'doon', password: 'doon123', role: 'doon' },
+                { username: 'govt', password: 'govt123', role: 'govt' },
+                { username: 'poda', password: 'poda123', role: 'poda' },
+                {username: 'saka', password: 'saka123', role: 'saka'},
+                {username: 'satt', password: 'satt123', role: 'satt'},
+                {username: 'thal', password: 'thal123', role: 'thal'},
+                {username: 'nirm', password: 'nirm123', role: 'nirm'},
+                {username: 'prak', password: 'prak123', role: 'prak'},
+                {username: 'vidh', password: 'vidh123', role: 'vidh'},
+                {username: 'flor', password: 'flor123', role: 'flor'},
+                {username: 'jps', password: 'jps123', role: 'jps'},
+                {username: 'kes', password: 'kes123', role: 'kes'},
+                {username: 'vps', password: 'vps123', role: 'vps'},
+                {username: 'lal', password: 'lal123', role: 'lal'},
+                {username: 'ms', password: 'ms123', role: 'ms'},
+                {username: 'sb', password: 'sb123', role: 'sb'},
+                {username: 'shan', password: 'shan123', role: 'shan'},
+                {username: 'sun', password: 'sun123', role: 'sun'},
+                {username: 'time', password: 'time123', role: 'time'},
+            ];
+
+            const user = users.find(u => u.username === username && u.password === password);
+
+                if (user) {
+                    if (user.role === 'doon') {
+                        alert('School login successful. Redirecting to doon school dashboard.');
+                        window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/ChandKheda/school list/Doon Blossom Academy/school/doon.html";
+                    } else if (user.role === 'govt') {
+                        alert('Govt. login successful. Redirecting to govt page.');
+                        window.location.href = "./Htmlprojects/Gujarat/gujarat districts.html";
+                    }
+                    else if (user.role === 'poda') {
+                        alert('School login successful. Redirecting to poda school dashboard.');
+                        window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/ChandKheda/school list/Podar International School/school/podar.html";
+                    }
+                    else if (user.role === 'saka') {
+                        alert('School login successful. Redirecting to saka school dashboard.');
+                        window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/ChandKheda/school list/Sakar English School/school/sakar.html";
+                    }
+                    else if (user.role === 'satt') {
+                    alert('School login successful. Redirecting to satt school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/Thaltej/school list/Sattva Vikas School/school/sattva.html";
+                    }
+                    else if (user.role === 'thal') {
+                    alert('School login successful. Redirecting to thal school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/Thaltej/school list/Thaltej Public School/school/thal.html";
+                    }
+                     else if (user.role === 'nirm') {
+                    alert('School login successful. Redirecting to nirm school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/VastraPur/school list/Nirman High School/school//nirman.html";
+                    }
+                    else if (user.role === 'prak') {
+                    alert('School login successful. Redirecting to prak school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/VastraPur/school list/Prakash School/school/prakash.html";
+                    }
+                    else if (user.role === 'vidh') {
+                    alert('School login successful. Redirecting to vidh school dashboard.'); 
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/VastraPur/school list/Vidhyanagar School/school/vidhya.html";
+                    }
+                    else if (user.role === 'flor') {
+                    alert('School login successful. Redirecting to flor school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Ahmedabad/Mandal List/Thaltej/school list/Florescent school/school/flor.html";
+                    }
+                    else if (user.role === 'jps') {
+                    alert('School login successful. Redirecting to jps school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Kalavad/school list/Jps/school/jpsschool.html";
+                    }
+                    else if (user.role === 'kes') {
+                    alert('School login successful. Redirecting to kes school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Kalavad/school list/KES/school/kes.html"; 
+                    }
+                    else if (user.role === 'vps') {
+                    alert('School login successful. Redirecting to vps school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Kalavad/school list/VPS/school/vps.html";
+                    }
+                    else if (user.role === 'lal') {
+                    alert('School login successful. Redirecting to lal school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/New Mehul Nagar/school list/Lal School/school/lal.html";
+                    }
+                    else if (user.role === 'ms') {
+                    alert('School login successful. Redirecting to ms school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/New Mehul Nagar/school list/M.S School/school/ms.html";
+                    }
+                    else if (user.role === 'sb') {
+                    alert('School login successful. Redirecting to sb school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/New Mehul Nagar/school list/SB Sharma World School/school/sb.html";
+                    }
+                    else if (user.role === 'shan') {
+                    alert('School login successful. Redirecting to shan school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Patel Colony/school list/shanti/school/shanti junior school.html";
+                    }
+                    else if (user.role === 'sunr') {
+                    alert('School login successful. Redirecting to sun school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Patel Colony/school list/sunflower/school/sunflower school.html";
+                    }
+                    else if (user.role === 'time') {
+                    alert('School login successful. Redirecting to time school dashboard.');
+                    window.location.href = "./Htmlprojects/Gujarat/Jamnagar/Mandals List/Patel Colony/school list/time kids/school/time kids school.html";
+                    }
+             else{
+                alert('Login failed. Please check your username and password.');
+            }
+        };
+
+    });
+    </script>
+</body>
+</html>
